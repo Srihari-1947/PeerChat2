@@ -1,7 +1,3 @@
-
-let APP_ID="aa2b80fd5bc542b8b23b9b4d7bf327cf"
-let token=null;
-
 let uid=String(Math.floor(Math.random()*10000))
 let localstream;
 let remotestream;
@@ -94,8 +90,6 @@ let init= async() =>
         const url = 'wss://webrtc-05ak.onrender.com/'
         const client = await createWebSocketClient(url,Member_Id)
         client.connect()
-        //channel.on('MemberLeft',handleUserLeft)
-        
         localstream= await navigator.mediaDevices.getUserMedia({video:true,audio:false})
         document.getElementById("user-1").srcObject= localstream
        
